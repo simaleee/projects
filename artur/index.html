@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный кабинет клиента</title>
+    <title>Личный кабинет | Артур</title>
     <style>
         :root {
-            --bg: #0f0f0f;
-            --accent: #00ff41; /* Цвет "Матрицы" или хай-тек */
+            --bg: #0b0b0b;
+            --accent: #00ff41; 
             --text: #e0e0e0;
-            --card-bg: #1a1a1a;
+            --card-bg: #161616;
+            --gray: #444;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -23,61 +24,98 @@
         }
         .container {
             width: 90%;
-            max-width: 500px;
+            max-width: 450px;
             background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+            border: 1px solid #222;
+        }
+        h1 { font-size: 1.4rem; margin-bottom: 5px; color: var(--accent); letter-spacing: 1px; }
+        .status-text { color: #888; font-size: 0.85rem; margin-bottom: 15px; display: block; }
+        
+        /* Шкала прогресса */
+        .progress-container {
+            background: #222;
+            border-radius: 10px;
+            height: 8px;
+            width: 100%;
+            margin-bottom: 30px;
+            overflow: hidden;
             border: 1px solid #333;
         }
-        h1 { font-size: 1.5rem; margin-bottom: 5px; color: var(--accent); }
-        p { color: #888; font-size: 0.9rem; margin-bottom: 25px; }
-        
+        .progress-bar {
+            background: var(--accent);
+            height: 100%;
+            width: 75%; /* ТУТ МЕНЯЙ ПРОЦЕНТ ГОТОВНОСТИ */
+            box-shadow: 0 0 10px var(--accent);
+            transition: width 0.5s ease-in-out;
+        }
+
         .file-card {
             display: flex;
             align-items: center;
-            background: #252525;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
+            background: #1f1f1f;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 12px;
             text-decoration: none;
             color: white;
-            transition: 0.3s;
-            border-left: 4px solid transparent;
+            transition: all 0.2s ease;
+            border: 1px solid #2a2a2a;
         }
         .file-card:hover {
-            background: #303030;
-            border-left-color: var(--accent);
-            transform: translateX(5px);
+            background: #252525;
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
-        .file-icon { font-size: 24px; margin-right: 15px; }
+        
+        /* Миниатюра изображения */
+        .preview-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+            margin-right: 15px;
+            object-fit: cover;
+            background: #333;
+        }
+
         .file-info { flex-grow: 1; }
-        .file-name { display: block; font-weight: bold; }
-        .file-size { font-size: 0.8rem; color: #777; }
+        .file-name { display: block; font-weight: 600; font-size: 0.95rem; }
+        .file-size { font-size: 0.75rem; color: #666; }
+        
+        .download-icon { color: var(--accent); font-size: 1.2rem; margin-left: 10px; opacity: 0.5; }
+        .file-card:hover .download-icon { opacity: 1; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Проект: Пивная Дом</h1>
-    <p>Актуальные файлы и визуализации для Артура</p>
+    <span class="status-text">Статус: Стадия визуализации (75%)</span>
+    
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
 
-    <!-- Ссылка на файл 1 -->
+    <!-- Файл 1 (с превьюшкой) -->
     <a href="render_v1.jpg" class="file-card" download>
-        <span class="file-icon">🖼️</span>
+        <img src="render_v1.jpg" class="preview-img" alt="превью">
         <div class="file-info">
-            <span class="file-name">Визуализация фасада (v1)</span>
-            <span class="file-size">JPG, 4.5 MB</span>
+            <span class="file-name">Визуализация фасада</span>
+            <span class="file-size">Изображение • 4.5 MB</span>
         </div>
+        <span class="download-icon">↓</span>
     </a>
 
-    <!-- Ссылка на файл 2 -->
+    <!-- Файл 2 -->
     <a href="drawings.pdf" class="file-card" download>
-        <span class="file-icon">📄</span>
+        <div class="preview-img" style="display:flex; align-items:center; justify-content:center; background:#222; font-size:20px;">📄</div>
         <div class="file-info">
-            <span class="file-name">Чертежи расстановки оборудования</span>
-            <span class="file-size">PDF, 1.2 MB</span>
+            <span class="file-name">Чертежи расстановки</span>
+            <span class="file-size">Документ PDF • 1.2 MB</span>
         </div>
+        <span class="download-icon">↓</span>
     </a>
 </div>
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет клиента</title>
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --accent: #00ff41; /* Цвет "Матрицы" или хай-тек */
+            --text: #e0e0e0;
+            --card-bg: #1a1a1a;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 5px; color: var(--accent); }
+        p { color: #888; font-size: 0.9rem; margin-bottom: 25px; }
+        
+        .file-card {
+            display: flex;
+            align-items: center;
+            background: #252525;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+            border-left: 4px solid transparent;
+        }
+        .file-card:hover {
+            background: #303030;
+            border-left-color: var(--accent);
+            transform: translateX(5px);
+        }
+        .file-icon { font-size: 24px; margin-right: 15px; }
+        .file-info { flex-grow: 1; }
+        .file-name { display: block; font-weight: bold; }
+        .file-size { font-size: 0.8rem; color: #777; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Проект: Пивная Дом</h1>
+    <p>Актуальные файлы и визуализации для Артура</p>
+
+    <!-- Ссылка на файл 1 -->
+    <a href="render_v1.jpg" class="file-card" download>
+        <span class="file-icon">🖼️</span>
+        <div class="file-info">
+            <span class="file-name">Визуализация фасада (v1)</span>
+            <span class="file-size">JPG, 4.5 MB</span>
+        </div>
+    </a>
+
+    <!-- Ссылка на файл 2 -->
+    <a href="drawings.pdf" class="file-card" download>
+        <span class="file-icon">📄</span>
+        <div class="file-info">
+            <span class="file-name">Чертежи расстановки оборудования</span>
+            <span class="file-size">PDF, 1.2 MB</span>
+        </div>
+    </a>
+</div>
+
+</body>
+</html>

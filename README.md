@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAXIM | DESIGN & DEV</title>
+    <title>MAXIM | PROJECTS</title>
     <style>
         :root {
             --bg: #050505;
@@ -52,23 +52,14 @@
             text-decoration: none;
             color: inherit;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
         }
         .project-card:hover {
             border-color: var(--accent);
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 255, 65, 0.1);
         }
-        .project-card h2 {
-            margin: 0 0 10px 0;
-            font-size: 1.2rem;
-        }
-        .project-card p {
-            color: #888;
-            font-size: 0.85rem;
-            margin: 0;
-        }
+        .project-card h2 { margin: 0 0 10px 0; font-size: 1.2rem; }
+        .project-card p { color: #888; font-size: 0.85rem; margin: 0; }
         .tag {
             display: inline-block;
             font-size: 0.7rem;
@@ -78,7 +69,6 @@
             border-radius: 20px;
             margin-top: 15px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
         .grid-bg {
             position: fixed;
@@ -100,32 +90,32 @@
 </header>
 
 <div class="grid">
-    <!-- КАРТОЧКА АРТУРА -->
+    <!-- Артур -->
     <a href="artur/" class="project-card">
         <h2>Артур</h2>
         <p>Дизайн интерьера и экстерьера. Пивная Дом.</p>
         <div class="tag">В работе</div>
     </a>
 
-    <!-- КАРТОЧКА АЛЕКСЕЯ ВИКТОРОВИЧА -->
+    <!-- Алексей Викторович -->
     <a href="aleksey/" class="project-card">
         <h2>Алексей Викторович</h2>
         <p>Ландшафт и система автополива.</p>
         <div class="tag">Проектирование</div>
     </a>
 
-    <!-- КАРТОЧКА НАТАЛКИ -->
+    <!-- Наталка -->
     <a href="natalka/" class="project-card">
         <h2>Наталка</h2>
-        <p>Реставрация и покраска (Дверь).</p>
+        <p>Реставрация и покраска двери.</p>
         <div class="tag">В очереди</div>
     </a>
 
-    <!-- ШВЕДИНО -->
+    <!-- Шведино -->
     <a href="shvedino/" class="project-card">
         <h2>Шведино</h2>
-        <p>Автоматизация полива яблочного сада.</p>
-        <div class="tag">Разработка ESP32</div>
+        <p>Автополив яблочного сада и дом.</p>
+        <div class="tag">Автоматизация</div>
     </a>
 </div>
 
